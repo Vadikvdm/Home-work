@@ -9,42 +9,41 @@ let produkt = [notebook, pen, eraser];
 
 
 
-// let maxNumber = Math.max([produkt]);
-// console.log(maxNumber);
 
-let maxNumber = Math.max(notebook, pen, eraser);
+
+const maxNumber = Math.max(notebook, pen, eraser);
 console.log(maxNumber + "грн");
 
 
-let minNumber = Math.min(notebook, pen, eraser);
+const minNumber = Math.min(notebook, pen, eraser);
 console.log(minNumber + "грн");
 
 
-let sumMaterial = (notebook + pen + eraser);
+const sumMaterial = (notebook + pen + eraser);
 console.log(sumMaterial + "грн");
 
-let numberRounding = Math.floor(notebook + pen + eraser);
+const numberRounding = Math.floor(notebook) + Math.floor(pen) + Math.floor(eraser);
 console.log(numberRounding + "грн");
 
-let hundredths = (Math.ceil(numberRounding / 100)) * 100;
+const hundredths = (Math.ceil(numberRounding / 100)) * 100;
 console.log(hundredths + "грн");
 
-let paritySign = numberRounding % 2 == 0;
+const paritySign = numberRounding % 2 == 0;
 console.log(paritySign);
 
-let surrender = payment - sumMaterial;
+const surrender = payment - sumMaterial;
 console.log(surrender + "грн");
 
-let mean = (sumMaterial / produkt.length).toFixed(4);
+const mean = (sumMaterial / produkt.length).toFixed(4);
 console.log(mean + "грн");
 
-let sail = Math.random(produkt) * (10);
+const sail = Math.random(produkt) * (10);
 console.log(sail  + "грн");
 
-let resaltSail = (sumMaterial - ((sail * sumMaterial) / 100)).toFixed(2);
+const resaltSail = (sumMaterial - ((sail * sumMaterial) / 100)).toFixed(2);
 console.log(resaltSail + "грн");
 
-let netProfit = ((sumMaterial / 2) - (sumMaterial - resaltSail)).toFixed(2);
+const netProfit = ((sumMaterial / 2) - (sumMaterial - resaltSail)).toFixed(2);
 console.log(netProfit + "грн");
 
 alert(`
