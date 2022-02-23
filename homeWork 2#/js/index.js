@@ -2,18 +2,18 @@ let meaningN;
 let meaningM;
 
 do {
-    meaningN = prompt("Введите значение N", 1)
-} while (!meaningN)
-const numberFormatN = Number(meaningN);
-alert(`Является ли число целым? = ${Number.isInteger(numberFormatN)}`);
-console.log(numberFormatN);
+    meaningN = +prompt("Введите значение N", 1)
+} while (!Number (meaningN > 0))
+
+alert(`Является ли число целым? = ${Number.isInteger(meaningN)}`);
+console.log(meaningN);
 
 do {
-    meaningM = prompt("Введите значение M", 10)
-} while (!meaningM)
-const numberFormatM = Number(meaningM);
-alert(`Является ли число целым? = ${Number.isInteger(numberFormatM)}`);
-console.log(numberFormatM);
+    meaningM = +prompt("Введите значение M", 10)
+} while (!Number (meaningM > meaningN))
+
+alert(`Является ли число целым? = ${Number.isInteger(meaningM)}`);
+console.log(meaningM);
 
 let paritySign = confirm("Использовать парные числа?");
 console.log(paritySign);
@@ -22,18 +22,18 @@ console.log(paritySign);
 let sum = 0;
 
 if (paritySign) {
-    for (i = numberFormatN; i < numberFormatM; i++) {
-        if (i % 2 !== 0) {
-        continue    
+    for (i = meaningN; i < meaningM; i++) {
+        if (i % 2 == 0) {
+            sum +=i;    
         }
    console.log(i);
     }
 } else {
-    for (i = numberFormatN; i < numberFormatM; i++) {
-        if (i % 2 == 0) {
-        continue    
+    for (i = meaningN; i < meaningM; i++) {
+        if (i % 2 !== 0) {
+            sum +=i;   
         }
    console.log(i);
     }
 }
-alert(`Результат суммы = ${sum +=i}`); //Есть у кого-то идеии, почему результат не выходит.
+alert(`Результат суммы = ${sum}`); //Есть у кого-то идеии, почему результат не выходит.
